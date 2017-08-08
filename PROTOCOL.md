@@ -76,7 +76,19 @@ There are two interfaces. The only difference is that one is HTTP and the second
 
 <hr>
 
+### Vysledek
+This is result code
+
+| Code  | Description |
+|-------|-------------|
+| 0;    | OK          |
+| 101;  | ERROR       |
+| 1001; | ERROR       |
+
+<hr>
+
 ### WSCasServeru
+Get time from server
 #### Input
 | Name          | Type   | Description                               |
 |---------------|--------|-------------------------------------------|
@@ -89,54 +101,136 @@ There are two interfaces. The only difference is that one is HTTP and the second
 | Name       | Type   | Description                                      |
 |------------|--------|--------------------------------------------------|
 | Result     | String | Always None                                      |
-| Vysledek   | String | See [Vysledek](#vysledek) section                |
+| Vysledek   | String | Result. See [Vysledek](#vysledek) section        |
 | CasServeru | String | Time of the server. Format is YYYY-MM-DDTh:mm:ss |
 
 ### WSDemoUzivatel
+
 ### WSJidArchiv
-### WSJidArchivB  
+
+### WSJidArchivB
+
 ### WSJidArchivObdobi
+
 ### WSJidelnicky
+
 ### WSJidelnicky2
+
 ### WSJidelnickyA
+
 ### WSJidelnickyB
+
 ### WSJidelnickyB2
+
 ### WSJidelnickyBA
+
 ### WSNactiBVlastnostiUzivatele
+
 ### WSNactiVlastnostiUzivatele
+
 ### WSOdhlaseniUzivatele
+Logout user
+
+#### Inputs
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always empty                                                                  |
+| AutUzivatelWS | String | See [HARDCODED Inputs](#hardcoded-inputs)                                     |
+| AutHesloSW    | String | See [HARDCODED Inputs](#hardcoded-inputs)                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+
+#### Result
+| Name     | Type   | Description                               |
+|----------|--------|-------------------------------------------|
+| Result   | String | Always None                               |
+| Vysledek | String | Result. See [Vysledek](#vysledek) section |
+
 ### WSPovolenaVerzeA
+
 ### WSPrihlaseniUzivatele
+Seems broken. Use [WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) instead
+
 ### WSPrihlaseniUzivateleA
+Login user
+
+#### Inputs
+| Name          | Type   | Description                                              |
+|---------------|--------|----------------------------------------------------------|
+| Vysledek      | String | Always None                                              |
+| AutUzivatelWS | String | See [HARDCODED Inputs](#hardcoded-inputs)                |
+| AutHesloSW    | String | See [HARDCODED Inputs](#hardcoded-inputs)                |
+| Zarizeni      | String | Code of institution                                      |
+| Uzivatel      | String | Username                                                 |
+| Heslo         | String | Password                                                 |
+| Email         | String | Email, LEAVE IT EMPTY                                    |
+| VerzeAplikace | String | App version, see [VerzeAplikace](#verzeaplikace) section |
+
+#### Result
+| Name     | Type   | Description                                   |
+|----------|--------|-----------------------------------------------|
+| Result   | String | None or SID + Login message, separated with ; |
+| Vysledek | String | Result. See [Vysledek](#vysledek) section     |
+
 ### WSPrihlaseniUzivateleE
+
 ### WSPrihlaseniUzivateleI
+
 ### WSPrihlaseniUzivateleK
+
 ### WSRozpisBPlateb
+
 ### WSRozpisBVydeje
+
 ### WSRozpisJObjednavek
+
 ### WSRozpisObjednavek
+
 ### WSRozpisPlateb
+
 ### WSRozpisVydeje
+
 ### WSS_OdeslaniMailu
+
 ### WSS_OdeslaniMailu2
+
 ### WSS_OdeslaniSouboru
+
 ### WSS_OdeslaniSouboru_S
+
 ### WSS_Odhlaseni
+
 ### WSS_Prihlaseni
+
 ### WSS_PrijemSouboru
+
 ### WSS_PrijemSouboruMail
+
 ### WSS_SmazaniSouboru
+
 ### WSS_URLWSDL
+
 ### WSS_URLWSDL_S
+
 ### WSS_VypisAdresare
+
 ### WSSeznamBZprav
+
 ### WSSeznamPOZarizeni
+
 ### WSSeznamPZarizeni
+
 ### WSSeznamZarizeni
+
 ### WSSeznamZprav
+
 ### WSStavKontaUzivatele
+
 ### WSTestUzivatele
+
 ### WSUlozVlastnostiUzivatele
+
 ### WSUlozeniObjednavek
+
 ### WSZapisUdajeZarizeni
+
 ### WSZprava
