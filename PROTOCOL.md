@@ -66,18 +66,8 @@ There are two interfaces. The only difference is that one is HTTP and the second
 
 <hr>
 
-### HARDCODED Inputs
-| Name          | Type   | Value            |
-|---------------|--------|------------------|
-| AutUzivatelWS | String | ANDROID58        |
-| AutHesloSW    | String | gQaUdg6H0eb2xXBV |
-| Vysledek      | String |                  |
-| CasServeru    | String |                  |
-
-<hr>
-
 ### Vysledek
-This is result code
+Result codes
 
 | Code  | Description |
 |-------|-------------|
@@ -93,15 +83,15 @@ Get time from server
 | Name          | Type   | Description                               |
 |---------------|--------|-------------------------------------------|
 | Vysledek      | String | Always empty                              |
-| AutUzivatelWS | String | See [HARDCODED Inputs](#hardcoded-inputs) |
-| AutHesloSW    | String | See [HARDCODED Inputs](#hardcoded-inputs) |
+| AutUzivatelWS | String | Always "ANDROID58"                        |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                 |
 | CasServeru    | String | Always empty                              |
 
 #### Result
 | Name       | Type   | Description                                      |
 |------------|--------|--------------------------------------------------|
 | Result     | String | Always None                                      |
-| Vysledek   | String | Result. See [Vysledek](#vysledek) section        |
+| Vysledek   | String | Result code. See [Vysledek](#vysledek) section   |
 | CasServeru | String | Time of the server. Format is YYYY-MM-DDTh:mm:ss |
 
 ### WSDemoUzivatel
@@ -134,16 +124,16 @@ Logout user
 #### Inputs
 | Name          | Type   | Description                                                                   |
 |---------------|--------|-------------------------------------------------------------------------------|
-| Vysledek      | String | Always empty                                                                  |
-| AutUzivatelWS | String | See [HARDCODED Inputs](#hardcoded-inputs)                                     |
-| AutHesloSW    | String | See [HARDCODED Inputs](#hardcoded-inputs)                                     |
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
 | SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
 
 #### Result
-| Name     | Type   | Description                               |
-|----------|--------|-------------------------------------------|
-| Result   | String | Always None                               |
-| Vysledek | String | Result. See [Vysledek](#vysledek) section |
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | Always None                                    |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSPovolenaVerzeA
 
@@ -157,19 +147,19 @@ Login user
 | Name          | Type   | Description                                              |
 |---------------|--------|----------------------------------------------------------|
 | Vysledek      | String | Always None                                              |
-| AutUzivatelWS | String | See [HARDCODED Inputs](#hardcoded-inputs)                |
-| AutHesloSW    | String | See [HARDCODED Inputs](#hardcoded-inputs)                |
+| AutUzivatelWS | String | Always "ANDROID58"                                       |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                |
 | Zarizeni      | String | Code of institution                                      |
 | Uzivatel      | String | Username                                                 |
 | Heslo         | String | Password                                                 |
-| Email         | String | Email, LEAVE IT EMPTY                                    |
+| Email         | String | Always None                                              |
 | VerzeAplikace | String | App version, see [VerzeAplikace](#verzeaplikace) section |
 
 #### Result
-| Name     | Type   | Description                                   |
-|----------|--------|-----------------------------------------------|
-| Result   | String | None or SID + Login message, separated with ; |
-| Vysledek | String | Result. See [Vysledek](#vysledek) section     |
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | None or SID + Login message, separated with ;  |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSPrihlaseniUzivateleE
 
@@ -182,8 +172,51 @@ Login user
 ### WSRozpisBVydeje
 
 ### WSRozpisJObjednavek
+Get food menu specific for user with specified language
+
+#### Inputs
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+| XSDSchema     | String | Always "NE,NE"                                                                |
+| Konto         | String | Always "0"                                                                    |
+| DatCas_akt    | String | Always None                                                                   |
+| Jazyk         | String | Language, Format is [A2](http://www.worldatlas.com/aatlas/ctycodes.htm)       |
+
+#### Result
+| Name       | Type   | Description                                 |
+|------------|--------|---------------------------------------------|
+| Result     | String | XML about food menu                         |
+| Vysledek   | String | Result. See [Vysledek](#vysledek) section   |
+| XSDSchema  | String | Always "NE,NE". You can ignore this         |
+| Konto      | Double | Amount of money on account                  |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss |
 
 ### WSRozpisObjednavek
+Get food menu specific for user
+
+#### Inputs
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+| XSDSchema     | String | Always "NE,NE"                                                                |
+| Konto         | String | Always "0"                                                                    |
+| DatCas_akt    | String | Always None                                                                   |
+
+#### Result
+| Name       | Type   | Description                                 |
+|------------|--------|---------------------------------------------|
+| Result     | String | XML about food menu                         |
+| Vysledek   | String | Result. See [Vysledek](#vysledek) section   |
+| XSDSchema  | String | Always "NE,NE". You can ignore this         |
+| Konto      | Double | Amount of money on account                  |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss |
 
 ### WSRozpisPlateb
 
