@@ -385,111 +385,111 @@ Get food menu specific for user
 
 ### Sample (One day)
 ```xml
-<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
-<VFPData>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>P</druh>\t\t
-        <popisdruhu>polévka</popisdruhu>\t\t
-        <chod/>\t\t
-        <pocet>0</pocet>\t\t
-        <nazevjidelnicku>Houbové kyselo</nazevjidelnicku>\t\t
-        <cena>0</cena>\t\t
-        <omezeni>B</omezeni>\t\t
-        <stav/>\t\t
-        <datcas_kon>9999-12-31T00:00:00</datcas_kon>\t\t
-        <datcas_odh>9999-12-31T00:00:00</datcas_odh>\t\t
-        <polevka>A</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>01-Obiloviny obsahující lepek    06-Sójové boby (sója)            07-Mléko                         09-Celer                         </popis_al>\t\t
-        <popis_alzk>01-Obiloviny obsahující lepek    06-Sójové boby (sója)            07-Mléko                         09-Celer                         </popis_alzk>\t
-    </rozpisobjednavek>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>1</druh>\t\t
-        <popisdruhu>oběd 1</popisdruhu>\t\t
-        <chod>C</chod>\t\t
-        <pocet>1</pocet>\t\t
-        <nazevjidelnicku>RÝŽOVÝ NÁKYP SE ŠVESTKAMI A MERUŇKAMI, SYPANÉ CUKREM, POLITÉ ŠŤÁVOU</nazevjidelnicku>\t\t
-        <cena>29.00</cena>\t\t
-        <omezeni>5E</omezeni>\t\t
-        <stav>O</stav>\t\t
-        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
-        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
-        <polevka>N</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>03-Vejce                         07-Mléko                         </popis_al>\t\t
-        <popis_alzk>03-Vejce                         07-Mléko                         </popis_alzk>\t
-    </rozpisobjednavek>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>2</druh>\t\t
-        <popisdruhu>oběd 2</popisdruhu>\t\t
-        <chod>C</chod>\t\t
-        <pocet>0</pocet>\t\t
-        <nazevjidelnicku>KRŮTÍ PLÁTEK S PÓRKEM A ČESNEKEM, BRAMBORY, ŠŤÁVA, RAJČE</nazevjidelnicku>\t\t
-        <cena>29.00</cena>\t\t
-        <omezeni>5E</omezeni>\t\t
-        <stav>O</stav>\t\t
-        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
-        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
-        <polevka>N</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>01-Obiloviny obsahující lepek    07-Mléko                         </popis_al>\t\t
-        <popis_alzk>01-Obiloviny obsahující lepek    07-Mléko                         </popis_alzk>\t
-    </rozpisobjednavek>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>3</druh>\t\t
-        <popisdruhu>oběd 3</popisdruhu>\t\t
-        <chod>C</chod>\t\t
-        <pocet>0</pocet>\t\t
-        <nazevjidelnicku>ZELENINOVÝ TALÍŘ - PEČIVO, BRAMBOROVÝ SALÁT</nazevjidelnicku>\t\t
-        <cena>29.00</cena>\t\t
-        <omezeni>5E</omezeni>\t\t
-        <stav>O</stav>\t\t
-        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
-        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
-        <polevka>N</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         07-Mléko                         09-Celer                         10-Hořčice                       </popis_al>\t\t
-        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         07-Mléko                         09-Celer                         10-Hořčice                       </popis_alzk>\t
-    </rozpisobjednavek>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>4</druh>\t\t
-        <popisdruhu>oběd 4</popisdruhu>\t\t
-        <chod>C</chod>\t\t
-        <pocet>0</pocet>\t\t
-        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\t\t
-        <cena>29.00</cena>\t\t
-        <omezeni>5E</omezeni>\t\t
-        <stav>O</stav>\t\t
-        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
-        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
-        <polevka>N</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_al>\t\t
-        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_alzk>\t
-    </rozpisobjednavek>\t
-    <rozpisobjednavek>\t\t
-        <datum>2017-09-20</datum>\t\t
-        <druh>V</druh>\t\t
-        <popisdruhu>večeře 1</popisdruhu>\t\t
-        <chod>E</chod>\t\t
-        <pocet>0</pocet>\t\t
-        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\t\t
-        <cena>26.00</cena>\t\t
-        <omezeni>5E</omezeni>\t\t
-        <stav>O</stav>\t\t
-        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
-        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
-        <polevka>N</polevka>\t\t
-        <popisjidelnicku/>\t\t
-        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_al>\t\t
-        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_alzk>\t
-    </rozpisobjednavek>\t
-</VFPData>
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>\n
+<VFPData>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>P</druh>\n\t\t
+        <popisdruhu>polévka</popisdruhu>\n\t\t
+        <chod/>\n\t\t
+        <pocet>0</pocet>\n\t\t
+        <nazevjidelnicku>Houbové kyselo</nazevjidelnicku>\n\t\t
+        <cena>0</cena>\n\t\t
+        <omezeni>B</omezeni>\n\t\t
+        <stav/>\n\t\t
+        <datcas_kon>9999-12-31T00:00:00</datcas_kon>\n\t\t
+        <datcas_odh>9999-12-31T00:00:00</datcas_odh>\n\t\t
+        <polevka>A</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>01-Obiloviny obsahující lepek    \n06-Sójové boby (sója)            \n07-Mléko                         \n09-Celer                         \n</popis_al>\n\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    \n06-Sójové boby (sója)            \n07-Mléko                         \n09-Celer                         \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>1</druh>\n\t\t
+        <popisdruhu>oběd 1</popisdruhu>\n\t\t
+        <chod>C</chod>\n\t\t
+        <pocet>1</pocet>\n\t\t
+        <nazevjidelnicku>RÝŽOVÝ NÁKYP SE ŠVESTKAMI A MERUŇKAMI, SYPANÉ CUKREM, POLITÉ ŠŤÁVOU</nazevjidelnicku>\n\t\t
+        <cena>29.00</cena>\n\t\t
+        <omezeni>5E</omezeni>\n\t\t
+        <stav>O</stav>\n\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\n\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\n\t\t
+        <polevka>N</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>03-Vejce                         \n07-Mléko                         \n</popis_al>\n\t\t
+        <popis_alzk>03-Vejce                         \n07-Mléko                         \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>2</druh>\n\t\t
+        <popisdruhu>oběd 2</popisdruhu>\n\t\t
+        <chod>C</chod>\n\t\t
+        <pocet>0</pocet>\n\t\t
+        <nazevjidelnicku>KRŮTÍ PLÁTEK S PÓRKEM A ČESNEKEM, BRAMBORY, ŠŤÁVA, RAJČE</nazevjidelnicku>\n\t\t
+        <cena>29.00</cena>\n\t\t
+        <omezeni>5E</omezeni>\n\t\t
+        <stav>O</stav>\n\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\n\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\n\t\t
+        <polevka>N</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>01-Obiloviny obsahující lepek    \n07-Mléko                         \n</popis_al>\n\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    \n07-Mléko                         \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>3</druh>\n\t\t
+        <popisdruhu>oběd 3</popisdruhu>\n\t\t
+        <chod>C</chod>\n\t\t
+        <pocet>0</pocet>\n\t\t
+        <nazevjidelnicku>ZELENINOVÝ TALÍŘ - PEČIVO, BRAMBOROVÝ SALÁT</nazevjidelnicku>\n\t\t
+        <cena>29.00</cena>\n\t\t
+        <omezeni>5E</omezeni>\n\t\t
+        <stav>O</stav>\n\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\n\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\n\t\t
+        <polevka>N</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>01-Obiloviny obsahující lepek    \n03-Vejce                         \n07-Mléko                         \n09-Celer                         \n10-Hořčice                       \n</popis_al>\n\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    \n03-Vejce                         \n07-Mléko                         \n09-Celer                         \n10-Hořčice                       \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>4</druh>\n\t\t
+        <popisdruhu>oběd 4</popisdruhu>\n\t\t
+        <chod>C</chod>\n\t\t
+        <pocet>0</pocet>\n\t\t
+        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\n\t\t
+        <cena>29.00</cena>\n\t\t
+        <omezeni>5E</omezeni>\n\t\t
+        <stav>O</stav>\n\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\n\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\n\t\t
+        <polevka>N</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>01-Obiloviny obsahující lepek    \n03-Vejce                         \n05-Arašídy (podzemnice olejná)   \n06-Sójové boby (sója)            \n10-Hořčice                       \n</popis_al>\n\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    \n03-Vejce                         \n05-Arašídy (podzemnice olejná)   \n06-Sójové boby (sója)            \n10-Hořčice                       \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+    <rozpisobjednavek>\n\t\t
+        <datum>2017-09-20</datum>\n\t\t
+        <druh>V</druh>\n\t\t
+        <popisdruhu>večeře 1</popisdruhu>\n\t\t
+        <chod>E</chod>\n\t\t
+        <pocet>0</pocet>\n\t\t
+        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\n\t\t
+        <cena>26.00</cena>\n\t\t
+        <omezeni>5E</omezeni>\n\t\t
+        <stav>O</stav>\n\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\n\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\n\t\t
+        <polevka>N</polevka>\n\t\t
+        <popisjidelnicku/>\n\t\t
+        <popis_al>01-Obiloviny obsahující lepek    \n03-Vejce                         \n05-Arašídy (podzemnice olejná)   \n06-Sójové boby (sója)            \n10-Hořčice                       \n</popis_al>\n\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    \n03-Vejce                         \n05-Arašídy (podzemnice olejná)   \n06-Sójové boby (sója)            \n10-Hořčice                       \n</popis_alzk>\n\t
+    </rozpisobjednavek>\n\t
+</VFPData>\n
 ```
 
 ## Institution info XML (WSSeznamZarizeni)
