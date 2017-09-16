@@ -187,13 +187,13 @@ Get food menu specific for user with specified language
 | Jazyk         | String | Language, Format is [A2](http://www.worldatlas.com/aatlas/ctycodes.htm)       |
 
 #### Result
-| Name       | Type   | Description                                 |
-|------------|--------|---------------------------------------------|
-| Result     | String | XML about food menu                         |
-| Vysledek   | String | Result. See [Vysledek](#vysledek) section   |
-| XSDSchema  | String | Always "NE,NE". You can ignore this         |
-| Konto      | Double | Amount of money on account                  |
-| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss |
+| Name       | Type   | Description                                                     |
+|------------|--------|-----------------------------------------------------------------|
+| Result     | String | XML about food menu. See [Food XML](#food-xml-rozpisobjednavek) |
+| Vysledek   | String | Result. See [Vysledek](#vysledek) section                       |
+| XSDSchema  | String | Always "NE,NE". You can ignore this                             |
+| Konto      | Double | Amount of money on account                                      |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss                     |
 
 ### WSRozpisObjednavek
 Get food menu specific for user
@@ -210,13 +210,13 @@ Get food menu specific for user
 | DatCas_akt    | String | Always None                                                                   |
 
 #### Result
-| Name       | Type   | Description                                 |
-|------------|--------|---------------------------------------------|
-| Result     | String | XML about food menu                         |
-| Vysledek   | String | Result. See [Vysledek](#vysledek) section   |
-| XSDSchema  | String | Always "NE,NE". You can ignore this         |
-| Konto      | Double | Amount of money on account                  |
-| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss |
+| Name       | Type   | Description                                                     |
+|------------|--------|-----------------------------------------------------------------|
+| Result     | String | XML about food menu. See [Food XML](#food-xml-rozpisobjednavek) |
+| Vysledek   | String | Result. See [Vysledek](#vysledek) section                       |
+| XSDSchema  | String | Always "NE,NE". You can ignore this                             |
+| Konto      | Double | Amount of money on account                                      |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss                     |
 
 ### WSRozpisPlateb
 
@@ -267,3 +267,208 @@ Get food menu specific for user
 ### WSZapisUdajeZarizeni
 
 ### WSZprava
+
+## Food XML (RozpisObjednavek)
+
+### Specification
+```xml
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="VFPData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rozpisobjednavek" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:date" name="datum">
+                                <xs:annotation>
+                                    <xs:documentation>Date</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="druh">
+                                <xs:annotation>
+                                    <xs:documentation>Type of food. P = Soup, V = Dinner, Number = Food number for choice</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string " name="popisdruhu">
+                                <xs:annotation>
+                                    <xs:documentation>Type of food as full string</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="chod">
+                                <xs:annotation>
+                                    <xs:documentation>Dining operation. C = Normal food, E = Dinner, there are some unknown value</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:integer" name="pocet">
+                                <xs:annotation>
+                                    <xs:documentation>Number of ordered meals</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="nazevjidelnicku">
+                                <xs:annotation>
+                                    <xs:documentation>Food name</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:decimal" name="cena">
+                                <xs:annotation>
+                                    <xs:documentation>Price of food</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="omezeni">
+                                <xs:annotation>
+                                    <xs:documentation>Some unknown restriction, maybe allergens</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:integer" name="stav">
+                                <xs:annotation>
+                                    <xs:documentation>Some unknown state</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:date" name="datcas_kon">
+                                <xs:annotation>
+                                    <xs:documentation>Maximum time for checking in food</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:date" name="datcas_odh">
+                                <xs:annotation>
+                                    <xs:documentation>Maximum time for checking out food</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="polevka">
+                                <xs:annotation>
+                                    <xs:documentation>Soup indicator. A = It's soup, N = It's other food</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="popisjidelnicku">
+                                <xs:annotation>
+                                    <xs:documentation>Description of the menu</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="popis_al">
+                                <xs:annotation>
+                                    <xs:documentation>Allergens</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element type="xs:string" name="popis_alz">
+                                <xs:annotation>
+                                    <xs:documentation>Allergens</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+```
+
+### Sample (One day)
+```xml
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>
+<VFPData>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>P</druh>\t\t
+        <popisdruhu>polévka</popisdruhu>\t\t
+        <chod/>\t\t
+        <pocet>0</pocet>\t\t
+        <nazevjidelnicku>Houbové kyselo</nazevjidelnicku>\t\t
+        <cena>0</cena>\t\t
+        <omezeni>B</omezeni>\t\t
+        <stav/>\t\t
+        <datcas_kon>9999-12-31T00:00:00</datcas_kon>\t\t
+        <datcas_odh>9999-12-31T00:00:00</datcas_odh>\t\t
+        <polevka>A</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>01-Obiloviny obsahující lepek    06-Sójové boby (sója)            07-Mléko                         09-Celer                         </popis_al>\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    06-Sójové boby (sója)            07-Mléko                         09-Celer                         </popis_alzk>\t
+    </rozpisobjednavek>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>1</druh>\t\t
+        <popisdruhu>oběd 1</popisdruhu>\t\t
+        <chod>C</chod>\t\t
+        <pocet>1</pocet>\t\t
+        <nazevjidelnicku>RÝŽOVÝ NÁKYP SE ŠVESTKAMI A MERUŇKAMI, SYPANÉ CUKREM, POLITÉ ŠŤÁVOU</nazevjidelnicku>\t\t
+        <cena>29.00</cena>\t\t
+        <omezeni>5E</omezeni>\t\t
+        <stav>O</stav>\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
+        <polevka>N</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>03-Vejce                         07-Mléko                         </popis_al>\t\t
+        <popis_alzk>03-Vejce                         07-Mléko                         </popis_alzk>\t
+    </rozpisobjednavek>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>2</druh>\t\t
+        <popisdruhu>oběd 2</popisdruhu>\t\t
+        <chod>C</chod>\t\t
+        <pocet>0</pocet>\t\t
+        <nazevjidelnicku>KRŮTÍ PLÁTEK S PÓRKEM A ČESNEKEM, BRAMBORY, ŠŤÁVA, RAJČE</nazevjidelnicku>\t\t
+        <cena>29.00</cena>\t\t
+        <omezeni>5E</omezeni>\t\t
+        <stav>O</stav>\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
+        <polevka>N</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>01-Obiloviny obsahující lepek    07-Mléko                         </popis_al>\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    07-Mléko                         </popis_alzk>\t
+    </rozpisobjednavek>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>3</druh>\t\t
+        <popisdruhu>oběd 3</popisdruhu>\t\t
+        <chod>C</chod>\t\t
+        <pocet>0</pocet>\t\t
+        <nazevjidelnicku>ZELENINOVÝ TALÍŘ - PEČIVO, BRAMBOROVÝ SALÁT</nazevjidelnicku>\t\t
+        <cena>29.00</cena>\t\t
+        <omezeni>5E</omezeni>\t\t
+        <stav>O</stav>\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
+        <polevka>N</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         07-Mléko                         09-Celer                         10-Hořčice                       </popis_al>\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         07-Mléko                         09-Celer                         10-Hořčice                       </popis_alzk>\t
+    </rozpisobjednavek>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>4</druh>\t\t
+        <popisdruhu>oběd 4</popisdruhu>\t\t
+        <chod>C</chod>\t\t
+        <pocet>0</pocet>\t\t
+        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\t\t
+        <cena>29.00</cena>\t\t
+        <omezeni>5E</omezeni>\t\t
+        <stav>O</stav>\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
+        <polevka>N</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_al>\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_alzk>\t
+    </rozpisobjednavek>\t
+    <rozpisobjednavek>\t\t
+        <datum>2017-09-20</datum>\t\t
+        <druh>V</druh>\t\t
+        <popisdruhu>večeře 1</popisdruhu>\t\t
+        <chod>E</chod>\t\t
+        <pocet>0</pocet>\t\t
+        <nazevjidelnicku>KUNG PAO Z VEPŘOVÉHO MASA, JASMÍNOVÁ RÝŽE</nazevjidelnicku>\t\t
+        <cena>26.00</cena>\t\t
+        <omezeni>5E</omezeni>\t\t
+        <stav>O</stav>\t\t
+        <datcas_kon>2017-09-19T13:30:00</datcas_kon>\t\t
+        <datcas_odh>2017-09-19T13:30:00</datcas_odh>\t\t
+        <polevka>N</polevka>\t\t
+        <popisjidelnicku/>\t\t
+        <popis_al>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_al>\t\t
+        <popis_alzk>01-Obiloviny obsahující lepek    03-Vejce                         05-Arašídy (podzemnice olejná)   06-Sójové boby (sója)            10-Hořčice                       </popis_alzk>\t
+    </rozpisobjednavek>\t
+</VFPData>
+```
