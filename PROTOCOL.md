@@ -11,6 +11,24 @@ There are two interfaces. The only difference is that one is HTTP and the second
 
 ## WSDL SOAP Interface
 
+<hr>
+
+### Vysledek
+Result codes
+
+| Code  | Description |
+|-------|-------------|
+| 0;    | OK          |
+| 101;  | ERROR       |
+| 1001; | ERROR       |
+
+<hr>
+
+### VerzeAplikace
+App version. You can use any big number (n > ~1000 && n <= 2147483647) and you can verify supported version from [WSPovolenaVerzeA](#wspovolenaverzea)
+
+<hr>
+
 ### List of Operations
 | Name                                                        | Description               |
 |-------------------------------------------------------------|---------------------------|
@@ -63,19 +81,6 @@ There are two interfaces. The only difference is that one is HTTP and the second
 | [WSUlozeniObjednavek](#wsulozeniobjednavek)                 | Save orders               |
 | [WSZapisUdajeZarizeni](#wszapisudajezarizeni)               |                           |
 | [WSZprava](#wszprava)                                       |                           |
-
-<hr>
-
-### Vysledek
-Result codes
-
-| Code  | Description |
-|-------|-------------|
-| 0;    | OK          |
-| 101;  | ERROR       |
-| 1001; | ERROR       |
-
-<hr>
 
 ### WSCasServeru
 Get time from server
