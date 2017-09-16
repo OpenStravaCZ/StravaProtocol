@@ -186,7 +186,7 @@ Get food menu specific for user with specified language
 | AutUzivatelWS | String | Always "ANDROID58"                                                            |
 | AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
 | SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
-| xsSchema     | String | Always "NE,NE"                                                                |
+| XSDSchema     | String | Always "NE,NE"                                                                |
 | Konto         | String | Always "0"                                                                    |
 | DatCas_akt    | String | Always None                                                                   |
 | Jazyk         | String | Language, Format is [A2](http://www.worldatlas.com/aatlas/ctycodes.htm)       |
@@ -196,7 +196,7 @@ Get food menu specific for user with specified language
 |------------|--------|-------------------------------------------------------------------|
 | Result     | String | XML about food menu. See [Food XML](#food-xml-wsrozpisobjednavek) |
 | Vysledek   | String | Result. See [Vysledek](#vysledek) section                         |
-| xsSchema  | String | Always "NE,NE". You can ignore this                               |
+| XSDSchema  | String | Always "NE,NE". You can ignore this                               |
 | Konto      | Double | Amount of money on account                                        |
 | DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss                       |
 
@@ -210,7 +210,7 @@ Get food menu specific for user
 | AutUzivatelWS | String | Always "ANDROID58"                                                            |
 | AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
 | SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
-| xsSchema     | String | Always "NE,NE"                                                                |
+| XSDSchema     | String | Always "NE,NE"                                                                |
 | Konto         | String | Always "0"                                                                    |
 | DatCas_akt    | String | Always None                                                                   |
 
@@ -219,7 +219,7 @@ Get food menu specific for user
 |------------|--------|-------------------------------------------------------------------|
 | Result     | String | XML about food menu. See [Food XML](#food-xml-wsrozpisobjednavek) |
 | Vysledek   | String | Result. See [Vysledek](#vysledek) section                         |
-| xsSchema  | String | Always "NE,NE". You can ignore this                               |
+| XSDSchema  | String | Always "NE,NE". You can ignore this                               |
 | Konto      | Double | Amount of money on account                                        |
 | DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss                       |
 
