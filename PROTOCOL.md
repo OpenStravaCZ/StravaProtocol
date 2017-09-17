@@ -944,6 +944,7 @@ Get food menu specific for user
 ## User XML (WSNactiVlastnostiUzivatele)
 
 ### Specification (Based on specification inside returned XML)
+```xml
 <?xml version="1.0" encoding="Windows-1252" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="xs:schema">
@@ -1119,6 +1120,7 @@ Get food menu specific for user
         </xsd:complexType>
     </xs:element>
 </xs:schema>
+```
 
 ### Sample
 ```xml
