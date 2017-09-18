@@ -298,7 +298,7 @@ Get food menu specific for user
 #### Result
 | Name     | Type   | Description                                                            |
 |----------|--------|------------------------------------------------------------------------|
-| Result   | String | None or [Institution info XML](#InstitutionInfoXML.md)                 |
+| Result   | String | None or [Institution info XML](InstitutionInfoXML.md)                 |
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section                         |
 
 ### WSSeznamZprav
