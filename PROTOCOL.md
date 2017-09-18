@@ -204,6 +204,24 @@ Login user
 
 ### WSRozpisBVydeje
 
+#### Input
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+| Konto         | Double | Always "0"                                                                    |
+| DatCas_akt    | String | Always None                                                                   |
+
+#### Result
+| Name       | Type   | Description                                    |
+|------------|--------|------------------------------------------------|
+| Result     | String | None or [Food history XML](FoodHistoryXML.md)  |
+| Vysledek   | String | Result code. See [Vysledek](#vysledek) section |
+| Konto      | Double | Amount of money on account                     |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss    |
+
 ### WSRozpisJObjednavek
 Get food menu specific for user with specified language
 
