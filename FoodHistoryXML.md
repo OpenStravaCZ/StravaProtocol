@@ -42,7 +42,7 @@
                             </xs:element>
                             <xs:element type="xs:date" name="kod_vydej">
                                 <xs:annotation>
-                                    <xs:documentation>Uknown identificator, not important, always "V" for me</xs:documentation>
+                                    <xs:documentation>Unknown identificator, not important, always "V" for me</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                         </xs:sequence>
