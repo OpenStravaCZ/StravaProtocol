@@ -4,10 +4,10 @@
 ```xml
 <?xml version="1.0" encoding="Windows-1252" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="xs:schema">
+    <xs:element name="xsd:schema">
         <xs:complexType>
             <xs:annotation>
-                <xs:documentation>XSDSchema inside this XML that document VFPData (Total bullshit), you can ignore this xs:schema element while parsing</xs:documentation>
+                <xs:documentation>XSDSchema inside this XML that document VFPData, you can ignore this xs:schema element while parsing</xs:documentation>
             </xs:annotation>
         </xs:complexType>
     </xs:element>

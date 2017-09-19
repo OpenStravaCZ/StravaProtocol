@@ -329,6 +329,21 @@ Get food menu specific for user
 
 ### WSUlozeniObjednavek
 
+#### Input
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+| XMLObjednavky | String | Orders. Look at [Orders XML](OrdersXML.md) for more                           |
+
+#### Result
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | Always None                                    |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
+
 ### WSZapisUdajeZarizeni
 
 ### WSZprava
