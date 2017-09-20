@@ -31,7 +31,7 @@ App version. You can use any big number (n > ~1000 && n <= 2147483647) and you c
 
 ### List of Operations
 | Name                                                        | Description                | SID Required |
-|-------------------------------------------------------------|----------------------------|--------------|
+|-------------------------------------------------------------|----------------------------|:------------:|
 | [WSCasServeru](#wscasserveru)                               | Get time of server         | No           |
 | [WSDemoUzivatel](#wsdemouzivatel)                           | Login as demo user         | No           |
 | [WSJidArchiv](#wsjidarchiv)                                 |                            | No           |
