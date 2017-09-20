@@ -30,57 +30,57 @@ App version. You can use any big number (n > ~1000 && n <= 2147483647) and you c
 <hr>
 
 ### List of Operations
-| Name                                                        | Description               |
-|-------------------------------------------------------------|---------------------------|
-| [WSCasServeru](#wscasserveru)                               | Get time of server        |
-| [WSDemoUzivatel](#wsdemouzivatel)                           | Login as demo user        |
-| [WSJidArchiv](#wsjidarchiv)                                 |                           |
-| [WSJidArchivB](#wsjidarchivb)                               |                           |
-| [WSJidArchivObdobi](#wsjidarchivobdobi)                     |                           |
-| [WSJidelnicky](#wsjidelnicky)                               | Get food menu             |
-| [WSJidelnicky2](#wsjidelnicky2)                             | Get food menu             |
-| [WSJidelnickyA](#wsjidelnickya)                             | Get food menu             |
-| [WSJidelnickyB](#wsjidelnickyb)                             | Get food menu             |
-| [WSJidelnickyB2](#wsjidelnickyb2)                           | Get food menu             |
-| [WSJidelnickyBA](#wsjidelnickyba)                           | Get food menu             |
-| [WSNactiBVlastnostiUzivatele](#wsnactibvlastnostiuzivatele) | Load user information     |
-| [WSNactiVlastnostiUzivatele](#wsnactivlastnostiuzivatele)   | Load user information     |
-| [WSOdhlaseniUzivatele](#wsodhlaseniuzivatele)               | Logout user               |
-| [WSPovolenaVerzeA](#wspovolenaverzea)                       | Check app version         |
-| [WSPrihlaseniUzivatele](#wsprihlaseniuzivatele)             | Login user                |
-| [WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea)           | Login user                |
-| [WSPrihlaseniUzivateleE](#wsprihlaseniuzivatelee)           | Login user                |
-| [WSPrihlaseniUzivateleI](#wsprihlaseniuzivatelei)           | Login user                |
-| [WSPrihlaseniUzivateleK](#wsprihlaseniuzivatelek)           | Login user                |
-| [WSRozpisBPlateb](#wsrozpisbplateb)                         | Get list of payments      |
-| [WSRozpisBVydeje](#wsrozpisbvydeje)                         | Get list of food history  |
-| [WSRozpisJObjednavek](#wsrozpisjobjednavek)                 | Get list of orders        |
-| [WSRozpisObjednavek](#wsrozpisobjednavek)                   | Get list of orders        |
-| [WSRozpisPlateb](#wsrozpisplateb)                           | Get list of payments      |
-| [WSRozpisVydeje](#wsrozpisvydeje)                           | Get list of food history  |
-| [WSS_OdeslaniMailu](#wssodeslanimailu)                      | Send email                |
-| [WSS_OdeslaniMailu2](#wssodeslanimailu2)                    | Send email                |
-| [WSS_OdeslaniSouboru](#wssodeslanisouboru)                  | Send a file               |
-| [WSS_OdeslaniSouboru_S](#wssodeslanisouborus)               | Send a file               |
-| [WSS_Odhlaseni](#wssodhlaseni)                              |                           |
-| [WSS_Prihlaseni](#wssprihlaseni)                            |                           |
-| [WSS_PrijemSouboru](#wssprijemsouboru)                      | Recieve a file            |
-| [WSS_PrijemSouboruMail](#wssprijemsouborumail)              | Recieve a file from email |
-| [WSS_SmazaniSouboru](#wsssmazanisouboru)                    | Delete a file             |
-| [WSS_URLWSDL](#wssurlwsdl)                                  |                           |
-| [WSS_URLWSDL_S](#wssurlwsdls)                               |                           |
-| [WSS_VypisAdresare](#wssvypisadresare)                      | Directory listing         |
-| [WSSeznamBZprav](#wsseznambzprav)                           | List of messages          |
-| [WSSeznamPOZarizeni](#wsseznampozarizeni)                   | List of institutions      |
-| [WSSeznamPZarizeni](#wsseznampzarizeni)                     | List of institutions      |
-| [WSSeznamZarizeni](#wsseznamzarizeni)                       | Get info about institution|
-| [WSSeznamZprav](#wsseznamzprav)                             | List of messages          |
-| [WSStavKontaUzivatele](#wsskontauzivatele)                  | Get account balance       |
-| [WSTestUzivatele](#wsstestuzivatele)                        |                           |
-| [WSUlozVlastnostiUzivatele](#wsulozvlastnostiuzivatele)     | Save user information     |
-| [WSUlozeniObjednavek](#wsulozeniobjednavek)                 | Save orders               |
-| [WSZapisUdajeZarizeni](#wszapisudajezarizeni)               |                           |
-| [WSZprava](#wszprava)                                       |                           |
+| Name                                                        | Description                | SID Required |
+|-------------------------------------------------------------|----------------------------|--------------|
+| [WSCasServeru](#wscasserveru)                               | Get time of server         | No           |
+| [WSDemoUzivatel](#wsdemouzivatel)                           | Login as demo user         | No           |
+| [WSJidArchiv](#wsjidarchiv)                                 |                            | No           |
+| [WSJidArchivB](#wsjidarchivb)                               |                            | No           |
+| [WSJidArchivObdobi](#wsjidarchivobdobi)                     |                            | No           |
+| [WSJidelnicky](#wsjidelnicky)                               | Get food menu              | No           |
+| [WSJidelnicky2](#wsjidelnicky2)                             | Get food menu              | No           |
+| [WSJidelnickyA](#wsjidelnickya)                             | Get food menu              | No           |
+| [WSJidelnickyB](#wsjidelnickyb)                             | Get food menu              | No           |
+| [WSJidelnickyB2](#wsjidelnickyb2)                           | Get food menu              | No           |
+| [WSJidelnickyBA](#wsjidelnickyba)                           | Get food menu              | No           |
+| [WSNactiBVlastnostiUzivatele](#wsnactibvlastnostiuzivatele) | Load user information      | Yes          |
+| [WSNactiVlastnostiUzivatele](#wsnactivlastnostiuzivatele)   | Load user information      | Yes          |
+| [WSOdhlaseniUzivatele](#wsodhlaseniuzivatele)               | Logout user                | Yes          |
+| [WSPovolenaVerzeA](#wspovolenaverzea)                       | Check app version          | No           |
+| [WSPrihlaseniUzivatele](#wsprihlaseniuzivatele)             | Login user                 | No           |
+| [WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea)           | Login user                 | No           |
+| [WSPrihlaseniUzivateleE](#wsprihlaseniuzivatelee)           | Login user                 | No           |
+| [WSPrihlaseniUzivateleI](#wsprihlaseniuzivatelei)           | Login user                 | No           |
+| [WSPrihlaseniUzivateleK](#wsprihlaseniuzivatelek)           | Login user                 | No           |
+| [WSRozpisBPlateb](#wsrozpisbplateb)                         | Get list of payments       | Yes          |
+| [WSRozpisBVydeje](#wsrozpisbvydeje)                         | Get list of food history   | Yes          |
+| [WSRozpisJObjednavek](#wsrozpisjobjednavek)                 | Get list of orders         | Yes          |
+| [WSRozpisObjednavek](#wsrozpisobjednavek)                   | Get list of orders         | Yes          |
+| [WSRozpisPlateb](#wsrozpisplateb)                           | Get list of payments       | Yes          |
+| [WSRozpisVydeje](#wsrozpisvydeje)                           | Get list of food history   | Yes          |
+| [WSS_OdeslaniMailu](#wssodeslanimailu)                      | Send email                 | Yes          |
+| [WSS_OdeslaniMailu2](#wssodeslanimailu2)                    | Send email                 | Yes          |
+| [WSS_OdeslaniSouboru](#wssodeslanisouboru)                  | Send a file                | Yes          |
+| [WSS_OdeslaniSouboru_S](#wssodeslanisouborus)               | Send a file                | Yes          |
+| [WSS_Odhlaseni](#wssodhlaseni)                              |                            | Yes          |
+| [WSS_Prihlaseni](#wssprihlaseni)                            |                            | Yes          |
+| [WSS_PrijemSouboru](#wssprijemsouboru)                      | Recieve a file             | Yes          |
+| [WSS_PrijemSouboruMail](#wssprijemsouborumail)              | Recieve a file from email  | Yes          |
+| [WSS_SmazaniSouboru](#wsssmazanisouboru)                    | Delete a file              | Yes          |
+| [WSS_URLWSDL](#wssurlwsdl)                                  |                            | No           |
+| [WSS_URLWSDL_S](#wssurlwsdls)                               |                            | No           |
+| [WSS_VypisAdresare](#wssvypisadresare)                      | Directory listing          | Yes          |
+| [WSSeznamBZprav](#wsseznambzprav)                           | List of messages           | Yes          |
+| [WSSeznamPOZarizeni](#wsseznampozarizeni)                   | List of institutions       | No           |
+| [WSSeznamPZarizeni](#wsseznampzarizeni)                     | List of institutions       | No           |
+| [WSSeznamZarizeni](#wsseznamzarizeni)                       | Get info about institution | No           |
+| [WSSeznamZprav](#wsseznamzprav)                             | List of messages           | Yes          |
+| [WSStavKontaUzivatele](#wsskontauzivatele)                  | Get account balance        | Yes          |
+| [WSTestUzivatele](#wsstestuzivatele)                        |                            | No           |
+| [WSUlozVlastnostiUzivatele](#wsulozvlastnostiuzivatele)     | Save user information      | Yes          |
+| [WSUlozeniObjednavek](#wsulozeniobjednavek)                 | Save orders                | Yes          |
+| [WSZapisUdajeZarizeni](#wszapisudajezarizeni)               |                            | No           |
+| [WSZprava](#wszprava)                                       |                            | Yes          |
 
 ### WSCasServeru
 Get time from server
