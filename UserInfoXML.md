@@ -1,4 +1,7 @@
 ## User info XML
+There are two versions of this XML, the first is with specification inside each request, the second one is without this specification inside (recommended) 
+
+## WSNactiVlastnostiUzivatele (With specification inside each request)
 
 ### Specification (Based on specification inside returned XML)
 ```xml
@@ -307,6 +310,204 @@
             </xsd:complexType>\n\t\t
         </xsd:element>\n\t
     </xsd:schema>\n\t
+    <pomstravnik_wsvlastnosti>\n\t\t
+        <ev_cislo>1111</ev_cislo>\n\t\t
+        <zarizeni>2526</zarizeni>\n\t\t
+        <karta>424242422</karta>\n\t\t
+        <jmeno>Kuchař Josef</jmeno>\n\t\t
+        <var_symbol>999999</var_symbol>\n\t\t
+        <limit_prep>0.00</limit_prep>\n\t\t
+        <typ_dialb/>\n\t\t
+        <prezdivka>nickname</prezdivka>\n\t\t
+        <heslo>password</heslo>\n\t\t
+        <email>josef.kuchar267@gmail.com</email>\n\t\t
+        <izpravy/>\n\t\t
+        <datcas_akt>15. 9. 2017 14:07:43</datcas_akt>\n\t\t
+        <isk>N</isk>\n\t\t
+        <pdp>A</pdp>\n\t\t
+        <pov_zpravy>OMP</pov_zpravy>\n\t
+    </pomstravnik_wsvlastnosti>\n
+</VFPData>\n
+```
+
+## WSNactiBVlastnostiUzivatele
+
+### Specification (Based on specification inside returned XML)
+```xml
+<?xml version="1.0" encoding="Windows-1252" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="VFPData">
+        <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded">
+                <xsd:element name="pomstravnik_wsvlastnosti" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="ev_cislo">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:decimal">
+                                        <xsd:totalDigits value="5"/>
+                                        <xsd:fractionDigits value="0"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>User ID</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="zarizeni">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="5"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Institution code</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="karta">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="20"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Card number</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="jmeno">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="25"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Username</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="var_symbol">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="10"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Variable symbol</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="limit_prep">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:decimal">
+                                        <xsd:totalDigits value="7"/>
+                                        <xsd:fractionDigits value="2"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Unknown limit, maybe for loan</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="typ_dialb">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="1"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Unknown identifier</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="prezdivka">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="25"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Nickname</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="heslo">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="25"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>User password</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="email">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="100"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>User email</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="izpravy">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="15"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Special message for user</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="datcas_akt">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="20"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Last update</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="isk">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="1"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Unknown identifier</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="pdp">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="1"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Unknown identifier</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                            <xsd:element name="pov_zpravy">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="25"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                                <xs:annotation>
+                                    <xs:documentation>Unknown identifier</xs:documentation>
+                                </xs:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:choice>
+            <xsd:anyAttribute namespace="http://www.w3.org/XML/1998/namespace" processContents="lax"/>
+        </xsd:complexType>
+    </xs:element>
+</xs:schema>
+```
+
+### Sample
+```xml
+<?xml version = "1.0" encoding="Windows-1252" standalone="yes"?>\n
+<VFPData>\n\t
     <pomstravnik_wsvlastnosti>\n\t\t
         <ev_cislo>1111</ev_cislo>\n\t\t
         <zarizeni>2526</zarizeni>\n\t\t

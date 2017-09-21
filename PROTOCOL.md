@@ -121,6 +121,20 @@ Get time from server
 
 ### WSNactiBVlastnostiUzivatele
 
+#### Input
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+
+#### Result
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | None or [User info XML](UserInfoXML.md)        |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
+
 ### WSNactiVlastnostiUzivatele
 
 #### Input
@@ -271,7 +285,39 @@ Get food menu specific for user
 
 ### WSRozpisPlateb
 
+#### Input
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+
+#### Result
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | None or [Payments XML](PaymentsXML.md)         |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
+
 ### WSRozpisVydeje
+
+#### Input
+| Name          | Type   | Description                                                                   |
+|---------------|--------|-------------------------------------------------------------------------------|
+| Vysledek      | String | Always None                                                                   |
+| AutUzivatelWS | String | Always "ANDROID58"                                                            |
+| AutHesloSW    | String | Always "gQaUdg6H0eb2xXBV"                                                     |
+| SID           | String | See [result of WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) how to get it |
+| Konto         | Double | Always "0"                                                                    |
+| DatCas_akt    | String | Always None                                                                   |
+
+#### Result
+| Name       | Type   | Description                                    |
+|------------|--------|------------------------------------------------|
+| Result     | String | None or [Food history XML](FoodHistoryXML.md)  |
+| Vysledek   | String | Result code. See [Vysledek](#vysledek) section |
+| Konto      | Double | Amount of money on account                     |
+| DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss    |
 
 ### WSS_OdeslaniMailu
 
