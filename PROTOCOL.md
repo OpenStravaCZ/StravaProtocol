@@ -83,7 +83,8 @@ App version. You can use any big number (n > ~1000 && n <= 2147483647) and you c
 | [WSZprava](#wszprava)                                       |                            | Yes          |
 
 ### WSCasServeru
-Get time from server
+Get server time
+
 #### Input
 | Name          | Type   | Description                               |
 |---------------|--------|-------------------------------------------|
@@ -100,26 +101,37 @@ Get time from server
 | CasServeru | String | Time of the server. Format is YYYY-MM-DDTh:mm:ss |
 
 ### WSDemoUzivatel
+Login as demo user
 
 ### WSJidArchiv
+Get food menu archive
 
 ### WSJidArchivB
+Get food menu archive
 
 ### WSJidArchivObdobi
+Get food menu archive from specific period
 
 ### WSJidelnicky
+Get current food menu for specific institution
 
 ### WSJidelnicky2
+Get current food menu for specific institution
 
 ### WSJidelnickyA
+Get current food menu for specific institution
 
 ### WSJidelnickyB
+Get current food menu for specific institution
 
 ### WSJidelnickyB2
+Get current food menu for specific institution
 
 ### WSJidelnickyBA
+Get current food menu for specific institution
 
 ### WSNactiBVlastnostiUzivatele
+Get user information
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -136,6 +148,7 @@ Get time from server
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSNactiVlastnostiUzivatele
+Get user information (With specification inside each request)
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -169,8 +182,11 @@ Logout user
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSPovolenaVerzeA
+Check if app version is OK
 
 ### WSPrihlaseniUzivatele
+Login user
+
 Seems broken. Use [WSPrihlaseniUzivateleA](#wsprihlaseniuzivatelea) instead
 
 ### WSPrihlaseniUzivateleA
@@ -195,12 +211,16 @@ Login user
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSPrihlaseniUzivateleE
+Login user
 
 ### WSPrihlaseniUzivateleI
+Login user
 
 ### WSPrihlaseniUzivateleK
+Login user
 
 ### WSRozpisBPlateb
+Get payment history
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -217,6 +237,7 @@ Login user
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSRozpisBVydeje
+Get food history info
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -284,6 +305,7 @@ Get food menu specific for user
 | DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss                       |
 
 ### WSRozpisPlateb
+Get payments history (With specification inside each request)
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -300,6 +322,7 @@ Get food menu specific for user
 | Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSRozpisVydeje
+Get food history (With specification inside each request)
 
 #### Input
 | Name          | Type   | Description                                                                   |
@@ -320,12 +343,16 @@ Get food menu specific for user
 | DatCas_akt | String | Last update. Format is DD. MM. YYYY h:mm:ss    |
 
 ### WSS_OdeslaniMailu
+Send email
 
 ### WSS_OdeslaniMailu2
+Send email
 
 ### WSS_OdeslaniSouboru
+Send file
 
 ### WSS_OdeslaniSouboru_S
+Send file
 
 ### WSS_Odhlaseni
 
@@ -350,6 +377,7 @@ Get food menu specific for user
 ### WSSeznamPZarizeni
 
 ### WSSeznamZarizeni
+Get instituion information
 
 #### Input
 | Name          | Type   | Description               |
@@ -374,6 +402,7 @@ Get food menu specific for user
 ### WSUlozVlastnostiUzivatele
 
 ### WSUlozeniObjednavek
+Save orders
 
 #### Input
 | Name          | Type   | Description                                                                   |
