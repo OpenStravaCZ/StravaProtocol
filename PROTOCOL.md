@@ -16,11 +16,12 @@ There are two interfaces. The only difference is that one is HTTP and the second
 ### Vysledek
 Result codes
 
-| Code  | Description |
-|-------|-------------|
-| 0;    | OK          |
-| 101;  | ERROR       |
-| 1001; | ERROR       |
+| Code  | Description             |
+|-------|-------------------------|
+| 0;    | OK                      |
+| 101;  | ERROR                   |
+| 1001; | ERROR                   |
+| 2001; | Unsupported App version |
 
 <hr>
 
@@ -183,6 +184,18 @@ Logout user
 
 ### WSPovolenaVerzeA
 Check if app version is OK
+
+#### Input
+| Name          | Type   | Description |
+|---------------|--------|-------------|
+| Vysledek      | String | Always None |
+| VerzeAplikace | String | App version |
+
+#### Result
+| Name     | Type   | Description                                    |
+|----------|--------|------------------------------------------------|
+| Result   | String | None or True                                   |
+| Vysledek | String | Result code. See [Vysledek](#vysledek) section |
 
 ### WSPrihlaseniUzivatele
 Login user
